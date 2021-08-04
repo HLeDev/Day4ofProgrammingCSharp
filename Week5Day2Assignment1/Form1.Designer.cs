@@ -328,7 +328,7 @@ namespace Week5Day2Assignment1
             this.txtChkSum.Name = "txtChkSum";
             this.txtChkSum.Size = new System.Drawing.Size(226, 30);
             this.txtChkSum.TabIndex = 18;
-            this.txtChkSum.TextChanged += new System.EventHandler(this.txtChkSum_TextChanged);
+            //this.txtChkSum.TextChanged += new System.EventHandler(this.txtChkSum_TextChanged);
             // 
             // btnDispChk
             // 
@@ -363,7 +363,7 @@ namespace Week5Day2Assignment1
             this.txtSavingsSum.Name = "txtSavingsSum";
             this.txtSavingsSum.Size = new System.Drawing.Size(226, 30);
             this.txtSavingsSum.TabIndex = 21;
-            this.txtSavingsSum.TextChanged += new System.EventHandler(this.txtSavingsSum_TextChanged);
+            //this.txtSavingsSum.TextChanged += new System.EventHandler(this.txtSavingsSum_TextChanged);
             // 
             // lblSavingsTotal
             // 

@@ -61,6 +61,7 @@ namespace Week5Day2Assignment1
                 newCMoney._money = newCheckDep.Amount;
 
                 CheckingTotal();
+
             }
             else if (comboAcctType.Text == "Savings" && comboTransfer.Text != string.Empty && txtID.Text != string.Empty && txtFN.Text != string.Empty &&
                 txtLN.Text != string.Empty && txtCityState.Text != string.Empty && txtPhone.Text != string.Empty
@@ -146,35 +147,36 @@ namespace Week5Day2Assignment1
                     sum += double.Parse(gridSavings.Rows[i].Cells[5].Value.ToString());
                 }
             }
+            txtSavingsSum.Text = sum.ToString();
         }
 
 
-        private void txtChkSum_TextChanged(object sender, EventArgs e)
-        {
-            CustomerAccount newChTotal = new CustomerAccount();
-            newChTotal.Amount = Int32.Parse(txtChkSum.Text);
-            MoneyTransfer newCTotal = new MoneyTransfer();
-            newCTotal.LowMoney += NewTotal_LowMoney;
-            newCTotal._money = newChTotal.Amount;
-        }
+        //private void txtChkSum_TextChanged(object sender, EventArgs e)
+        //{
+        //    CustomerAccount newChTotal = new CustomerAccount();
+        //    newChTotal.Amount = Int32.Parse(txtChkSum.Text);
+        //    MoneyTransfer newCTotal = new MoneyTransfer();
+        //    newCTotal.LowMoney += NewTotal_LowMoney;
+        //    newCTotal._money = newChTotal.Amount;
+        //}
 
-        private void NewTotal_LowMoney(int money)
-        {
-            MessageBox.Show("Your Checking Account Balance is Below $100.00!!");
-        }
+        //private void NewTotal_LowMoney(int money)
+        //{
+        //    MessageBox.Show("Your Checking Account Balance is Below $100.00!!");
+        //}
 
-        private void txtSavingsSum_TextChanged(object sender, EventArgs e)
-        {
-            CustomerAccount newSavTotal = new CustomerAccount();
-            newSavTotal.Amount = Int32.Parse(txtSavingsSum.Text);
-            MoneyTransfer newSTotal = new MoneyTransfer();
-            newSTotal.LowMoney += NewSTotal_LowMoney;
-            newSTotal._money = newSavTotal.Amount;
-        }
+        //private void txtSavingsSum_TextChanged(object sender, EventArgs e)
+        //{
+        //    CustomerAccount newSavTotal = new CustomerAccount();
+        //    newSavTotal.Amount = Int32.Parse(txtSavingsSum.Text);
+        //    MoneyTransfer newSTotal = new MoneyTransfer();
+        //    newSTotal.LowMoney += NewSTotal_LowMoney;
+        //    newSTotal._money = newSavTotal.Amount;
+        //}
 
-        private void NewSTotal_LowMoney(int money)
-        {
-            MessageBox.Show("Your Savings Account Balance is Below $100.00!!");
-        }
+        //private void NewSTotal_LowMoney(int money)
+        //{
+        //    MessageBox.Show("Your Savings Account Balance is Below $100.00!!");
+        //}
     }
 }
